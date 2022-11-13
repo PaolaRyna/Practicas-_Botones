@@ -19,9 +19,7 @@ function TabsAndroid() {
     return (
 
         <BottomTabAndroid.Navigator
-
-            barStyle={{ backgroundColor: '#694fad' }}
-
+         barStyle={{ backgroundColor: '#048ABF' }}
             sceneAnimationEnabled={true}
             
             screenOptions={({ route }) => ({
@@ -31,11 +29,11 @@ function TabsAndroid() {
                     let iconName = '';
                     switch (route.name) {
                         case 'Tab1Screen':
-                            iconName = 'home-outline';
+                            iconName = 'today-outline';
                             break;
 
                         case 'Tab2Screen':
-                            iconName = 'notifications-outline';
+                            iconName = 'calendar-outline';
                             break;
 
                         case 'Tab3Screen':
@@ -46,13 +44,13 @@ function TabsAndroid() {
                             iconName = 'settings-outline';
                             break;
                     }
-                    return <Icon name={iconName} size={20} color={"#fff"} />;
+                    return <Icon name={iconName} size={22} color={"#fff"} />;
                 }
             })
             }
 
         >
-            <BottomTabAndroid.Screen name="Tab1Screen" options={{ title: "Home" }} component={Tab1Screen} />
+            <BottomTabAndroid.Screen name="Tab1Screen" options={{ title: "Reportes" }} component={Tab1Screen} />
             <BottomTabAndroid.Screen name="Tab2Screen" options={{ title: "Notifications" }} component={Tab2Screen} />
             <BottomTabAndroid.Screen name="Tab3Screen" options={{ title: "Profile" }} component={Tab3Screen} />
             <BottomTabAndroid.Screen name="Tab4Screen" options={{ title: "Settings" }} component={Tab4Screen} />
@@ -60,10 +58,7 @@ function TabsAndroid() {
     );
 }
 
-
-
 const BottomTabIOS = createBottomTabNavigator();
-
 export const TabsIOS = () => {
     return (
         <BottomTabIOS.Navigator
@@ -71,7 +66,7 @@ export const TabsIOS = () => {
 
                 tabBarIcon: (props) => {
 
-                    let iconName: string = '';
+                    let iconName = '';
                     switch (route.name) {
                         case 'Tab1Screen':
                             iconName = 'T1'

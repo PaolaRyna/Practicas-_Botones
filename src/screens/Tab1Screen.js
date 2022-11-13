@@ -2,6 +2,8 @@
 import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Text, StyleSheet, Pressable, Modal, FlatList, Alert, View } from 'react-native'
+import { Avatar, HStack, Center, NativeBaseProvider } from "native-base";
+
 import Formulario from '../components/Formulario';
 import Muestras from '../components/Muestras';
 import InfoReporte from '../components/InfoReporte';
@@ -48,9 +50,59 @@ export const Tab1Screen = () => {
 
   return (
 
+    
     <SafeAreaView style={styles.container}>
-      <View style={styles.reporton}>
+    
+     <View style={styles.reporton}>
         <Text style={styles.tituloreport}> Report on </Text>
+
+        <Center>
+      <Avatar.Group _avatar={{
+      size: "lg"
+    }} max={3}>
+        <Avatar bg="green.500" source={{
+        uri: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+      }}>
+          AJ
+        </Avatar>
+        <Avatar bg="cyan.500" source={{
+        uri: "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+      }}>
+          TE
+        </Avatar>
+        <Avatar bg="indigo.500" source={{
+        uri: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+      }}>
+          JB
+        </Avatar>
+        <Avatar bg="amber.500" source={{
+        uri: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+      }}>
+          TS
+        </Avatar>
+        <Avatar bg="green.500" source={{
+        uri: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+      }}>
+          AJ
+        </Avatar>
+        <Avatar bg="cyan.500" source={{
+        uri: "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+      }}>
+          TE
+        </Avatar>
+        <Avatar bg="indigo.500" source={{
+        uri: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+      }}>
+          JB
+        </Avatar>
+        <Avatar bg="amber.500" source={{
+        uri: "https://images.unsplash.com/photo-1510771463146-e89e6e86560e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80"
+       }}>
+          TS
+        </Avatar>
+      </Avatar.Group>
+    </Center>
+
       </View>
 
 
@@ -120,14 +172,14 @@ export const Tab1Screen = () => {
 
 const styles = StyleSheet.create({
   titulo: {
-    marginTop: 40,
+    marginTop: 30,
     textAlign: 'center',
     fontSize: 30,
     color: '#5D5D5D',
     fontWeight: '600',
   },
   container: {
-    backgroundColor: '#F3F4F6',
+   backgroundColor: '#ffffff',
     flex: 10
   },
   tituloBold: {
@@ -150,7 +202,7 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase'
   },
   sinReportes: {
-    marginTop: 50,
+    marginTop: 40,
     textAlign: 'center',
     fontSize: 30,
     color: '#8FBF26',

@@ -23,7 +23,6 @@ const Muestras = ({ item, setModalVisible,setReporte,reporteEditar, reporteElimi
         setReporte(item)
       }}
     >
-
       <View style={styles.contenedor}>
         <Text style={styles.label}>Reporte</Text>
         <Text style={styles.texto}>{namereporte}</Text>
@@ -66,8 +65,7 @@ const styles = StyleSheet.create({
   contenedor: {
     backgroundColor: '#FFF',
     padding: 20,
-    borderBottomColor: '#94a3B8',
-    borderBottomWidth: 1
+    marginVertical:5
   },
   label: {
     color: '#5D5D5D',
